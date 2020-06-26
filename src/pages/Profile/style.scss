@@ -1,0 +1,127 @@
+.ProfileContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto;
+  section {
+    width: 50%;
+    div {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      h2 {
+        width: 100%;
+        margin-left: 10px;
+        padding: 0 10px;
+        font-size: 20px;
+        border: 2px solid #005694;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px #6b6b6b;
+      }
+    }
+  }
+  article {
+    width: 50%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 4px 10px;
+    transition: height 0.5s, background-color 0.5s, align-items 0.5s,
+      box-shadow 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    background-color: #299eb6;
+    color: white;
+    box-shadow: 1px 1px 1px #6b6b6b;
+    &:hover,
+    &.selected {
+      align-items: center;
+      height: 200px;
+      background-color: #1d7688;
+      box-shadow: 4px 8px 4px #6b6b6b;
+      h2 {
+        text-align: center;
+      }
+      hr {
+        height: 1px;
+        width: 90%;
+      }
+      form,
+      div.ExternalChanges {
+        display: flex;
+      }
+    }
+    h2 {
+      width: 100%;
+      text-align: left;
+      border-radius: 20px;
+      cursor: pointer;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    form,
+    div.ExternalChanges {
+      flex: 1;
+      width: 90%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      p {
+        margin-top: 4px;
+      }
+      input {
+        box-shadow: 2px 2px #000000;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        * {
+          margin-left: 4px;
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+        }
+      }
+      .button {
+        border: 2px solid white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ProfileContainer {
+    section {
+      width: 75%;
+      div {
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+    article {
+      width: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .ProfileContainer {
+    section {
+      width: 90%;
+      div {
+        h2 {
+          font-size: 14px;
+        }
+      }
+    }
+    article {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.container-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    section {
+        height: 50%;
+        width: 90%;
+        article {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0;
+            color: #1d7688;
+        }
+        div {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            a {
+                text-align: center;
+                padding-top: 14px;
+            }
+            .button {
+                height: 44px;
+                &:hover {
+                    background: white;
+                    color: #1d7688;
+                    transition: 0.7s;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container-welcome {
+        section {
+            article {
+                h2 {
+                    font-size: 34px;
+                }
+                h4 {
+                    font-size: 30px;
+                }
+            }
+            div {
+                flex-direction: row;
+                justify-content: center;
+                a {
+                    margin-right: 40px;
+                }
+                a + a {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+footer {
+  height: 60px;
+  background-color: #1d7688;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  letter-spacing: 0.2ch;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  footer p {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

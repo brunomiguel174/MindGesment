@@ -1,0 +1,47 @@
+.div--banner {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: -120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+  visibility: visible;
+}
+
+.div--banner .alertDiv {
+  width: 33%;
+  height: 50px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #525050;
+  border-radius: 16px;
+  font-weight: bold;
+  color: #525050;
+  background-color: gold;
+}
+
+@media only screen and (max-width: 600px) {
+  .div--banner .alertDiv {
+    width: 80%;
+    height: 36px;
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

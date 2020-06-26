@@ -1,0 +1,250 @@
+$PrimaryColor: #004170;
+$SecundaryColor: #1d7688;
+$ThirdColor: #73bece;
+
+@mixin width_Height($w: 100%, $h: 100%) {
+  width: $w;
+  height: $h;
+}
+
+.Modal {
+  @include width_Height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  outline: none;
+  .ModalContainer {
+    @include width_Height(90%, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    border: 1px solid $SecundaryColor;
+    background: #e9fbff;
+    border-radius: 4px;
+    box-shadow: 0 0 50px rgb(112, 112, 112);
+    button.ModalActionBtns {
+      @include width_Height(30px, 30px);
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 50%;
+      background: none;
+      outline: none;
+      transition: 0.25s;
+      cursor: pointer;
+      &:hover {
+        background-color: #bebebe;
+      }
+    }
+    .ModalHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $ThirdColor;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      h2 {
+        overflow-x: auto;
+      }
+    }
+    div.ModalMain {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: stretch;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      overflow: hidden;
+      article {
+        flex: 1;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        button.BtnModal {
+          box-sizing: border-box;
+          padding: 4px 20px;
+          font-size: 20px;
+          font-weight: 700;
+          background-color: white;
+          border-radius: 10px;
+          cursor: pointer;
+          $BorderSize: 4px;
+          &:nth-child(1) {
+            border: $BorderSize solid green;
+            &:hover {
+              background-color: #93dd93;
+            }
+            &:active {
+              background-color: #2bd62b;
+            }
+          }
+          &:nth-child(2) {
+            border: $BorderSize solid red;
+            &:hover {
+              background-color: #ffa2a2;
+            }
+            &:active {
+              background-color: #ff6060;
+            }
+          }
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+        footer {
+          @include width_Height($h: auto);
+          padding-bottom: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+        &.ModalVisible {
+          display: flex;
+        }
+        &.ModalNotVisible {
+          display: none;
+        }
+        &.ModalNewWish {
+          align-items: center;
+          justify-content: center;
+          form {
+            @include width_Height($w: 90%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+          }
+        }
+        &.ModalRange {
+          @include width_Height;
+          overflow: hidden;
+          main {
+            flex-grow: 1;
+            overflow: hidden;
+            form {
+              width: 90%;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              ul {
+                padding-top: 10px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                overflow-y: auto;
+                border-top: 1px solid black;
+              }
+            }
+          }
+        }
+        &.ModalMainAccontWish {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          form.ModalMainWishAccont {
+            height: 100%;
+            width: 90%;
+            box-sizing: border-box;
+            padding: 2px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 0.6fr);
+            gap: 0px 2px;
+            grid-template-areas:
+              "ChangeName ChangeName ChangeName Date"
+              "Balance Total Total Total"
+              "RangePA RangePA RangePA RangePA"
+              "Description Description Description Description"
+              ". Save Save .";
+            border-radius: 3px;
+            border-bottom: 2px solid black;
+            div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            input,
+            label,
+            textarea {
+              width: 100%;
+              padding: 0 16px;
+              color: #333;
+              border-radius: 8px;
+              transition: border 0.2s;
+            }
+
+            div.Name {
+              grid-area: ChangeName;
+            }
+
+            div.Nome {
+              grid-area: Date;
+              p {
+                display: flex;
+                justify-content: flex-end;
+              }
+            }
+
+            div.H3Balance {
+              grid-area: Balance;
+              h3 {
+                display: flex;
+                align-items: center;
+              }
+              button {
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: none;
+                transition: 0.5s;
+                &:hover {
+                  transform: scale(1.2);
+                }
+              }
+            }
+
+            div.Total {
+              grid-area: Total;
+            }
+
+            div.rangePA {
+              grid-area: RangePA;
+            }
+
+            div.Description {
+              grid-area: Description;
+            }
+
+            div.Save {
+              grid-area: Save;
+            }
+          }
+
+          div.Transactions {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            form {
+              display: flex;
+              align-items: flex-end;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+footer {
+    height: 60px;
+    background-color: #1d7688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        letter-spacing: 0.2ch;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+         p {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.container-welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.container-welcome section {
+  height: 50%;
+  width: 90%;
+}
+
+.container-welcome section article {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  color: #1d7688;
+}
+
+.container-welcome section div {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container-welcome section div a {
+  text-align: center;
+  padding-top: 14px;
+}
+
+.container-welcome section div .button {
+  height: 44px;
+}
+
+.container-welcome section div .button:hover {
+  background: white;
+  color: #1d7688;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+@media only screen and (min-width: 600px) {
+  .container-welcome section article h2 {
+    font-size: 34px;
+  }
+  .container-welcome section article h4 {
+    font-size: 30px;
+  }
+  .container-welcome section div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-welcome section div a {
+    margin-right: 40px;
+  }
+  .container-welcome section div a + a {
+    margin-left: 40px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
